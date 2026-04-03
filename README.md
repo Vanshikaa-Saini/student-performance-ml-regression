@@ -3,11 +3,16 @@
 ## Overview
 This project predicts student exam scores using machine learning based on factors such as study hours, sleep patterns, attendance, and previous academic performance.
 
+---
+
 ## Technologies Used
 - Python
 - Pandas
 - Scikit-learn
 - Matplotlib
+- Seaborn
+
+---
 
 ## Dataset Features
 - Hours Studied
@@ -15,29 +20,48 @@ This project predicts student exam scores using machine learning based on factor
 - Attendance Percentage
 - Previous Scores
 
-## Model Used
+---
+
+## Models Used
 - Linear Regression
+- Random Forest Regressor
+
+---
 
 ## Model Performance
-- R² Score: 0.85  
-- Mean Absolute Error: ~2.3  
 
-The model demonstrates strong predictive performance and captures relationships between study habits and exam results.
+| Model | R² Score | MAE |
+|------|--------|-----|
+| Linear Regression | 0.85 | 2.31 |
+| Random Forest | 0.79 | 2.97 |
+
+### Key Insight
+Linear Regression outperformed Random Forest on this dataset, indicating a strong linear relationship between input features and exam scores. Simpler models generalized better due to the small dataset size.
+
+---
 
 ## Visualization
-Includes a scatter plot comparing actual vs predicted scores to evaluate model performance.
+- Scatter plot of actual vs predicted values  
+- Feature importance (Random Forest)  
+- Correlation heatmap  
 
-## Files
-- `student-performance-ml-regression.ipynb` – Main project notebook  
-- Dataset file – Input data  
+---
 
 ## Key Learnings
-- Data preprocessing and cleaning  
 - Multi-variable regression modeling  
-- Model evaluation using MAE and R²  
-- Visualization of results  
+- Model comparison and evaluation  
+- Feature importance analysis  
+- Data visualization techniques  
+
+---
+
+## Files
+- `student-performance-ml-regression.ipynb` – Main notebook  
+- Dataset file  
+
+---
 
 ## Future Improvements
-- Use advanced models like Random Forest  
+- Larger dataset  
 - Hyperparameter tuning  
-- Larger dataset for better accuracy  
+- Advanced models (XGBoost)
